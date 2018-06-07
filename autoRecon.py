@@ -23,7 +23,7 @@ def find_from_sublister(target):
 	if not hostname:
 		parser.error("Please use -h to see the help section.")
 	else:
-		print "\n\n                                                 [PHRASE: 1]                                                 \n"
+		print "\n\n                                                 [PHASE: 1]                                                 \n"
 		print "\n[!][!]Getting Subdomains from Sublister\n\n"
 		try:
 			os.chdir("/tools/Sublist3r-master/") #Note: Here you can change the Directory of Sublister tool
@@ -73,7 +73,7 @@ for url in find_from_sublister(hostname):
 		
     except requests.exceptions.RequestException as e:
         print "Can't make the request to this Subdomain {}".format(url)
-print "\n                                                 [PHRASE: 2]                                                 \n"
+print "\n                                                 [PHASE: 2]                                                 \n"
 print "\n......................................................................................\n"	
 print "\n[!]Greping the url's whose status code are 200\n"
 	
@@ -103,7 +103,7 @@ print "\n[!]Greping the url's whose status code are 404\n"
 
 for x in urls_returning404:
 	print x	
-print "\n\n                                                 [PHRASE: 3]                                                 \n"	
+print "\n\n                                                 [PHASE: 3]                                                 \n"	
 print "\n......................................................................................\n"	
 print "\n[!]Finding the CNAME's of 404 URL's\n"
 
@@ -151,7 +151,7 @@ def nmapscan():
 					print "{0}     {1}    {2}" .format(ports, nm[host][proto][ports]['state'], nm[host][proto][ports]['name'])
 	except KeyError as e:
 		print"[!] Cannot scan host!: " + new_url2 + "\n"		
-print "\n                                                 [PHRASE: 4]                                                 \n\n"		
+print "\n                                                 [PHASE: 4]                                                 \n\n"		
 print "\n......................................................................................\n"
 
 print "\n[!]Finding the Ports stats of 200's URL's \n"
