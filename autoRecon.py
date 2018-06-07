@@ -23,12 +23,12 @@ def find_from_sublister(target):
 	if not hostname:
 		parser.error("Please use -h to see the help section.")
 	else:
-		print "\n\n                                                 [PHASE: 1]                                                 \n"
+		print "\n\n                                                 [PHRASE: 1]: Starts below                                                 \n"
 		print "\n[!][!]Getting Subdomains from Sublister\n\n"
 		try:
 			os.chdir("/tools/Sublist3r-master/") #Note: Here you can change the Directory of Sublister tool
 			files = os.getcwd()
-			
+				
 			formate = "sublist3r.py -d " + str(target) + " -o " + str(filename)
 
 			subdomain = os.system(formate) 
@@ -54,7 +54,7 @@ urls_returning401 = []
 urls_returning403 = []
 urls_returning404 = []
 
-			
+
 for url in find_from_sublister(hostname):
     url = "http://" + url.strip()
     try:
@@ -73,8 +73,9 @@ for url in find_from_sublister(hostname):
 		
     except requests.exceptions.RequestException as e:
         print "Can't make the request to this Subdomain {}".format(url)
-print "\n                                                 [PHASE: 2]                                                 \n"
-print "\n......................................................................................\n"	
+print "\n...............................................................................................\n"			
+print "\n                                                 [PHRASE: 2]: Starts below                                                \n"			
+
 print "\n[!]Greping the url's whose status code are 200\n"
 	
 for x in urls_returning200:
@@ -103,40 +104,40 @@ print "\n[!]Greping the url's whose status code are 404\n"
 
 for x in urls_returning404:
 	print x	
-print "\n\n                                                 [PHASE: 3]                                                 \n"	
-print "\n......................................................................................\n"	
+print "\n...............................................................................................\n"	
+print "\n\n                                                 [PHRASE: 3]: Starts below                                                \n"	
+	
 print "\n[!]Finding the CNAME's of 404 URL's\n"
 
-for y in urls_returning404:
+for y in urls_returning400:
+	
 	req2 = requests.get(y)	
-	if req2.status_code == 404:
+	if req2.status_code == 400:
 		
-		new_url = y.strip("http://")
-		new_url2 = new_url.strip('/')
+		new_url = y.replace("http://", "")
+		
 		
 		try:
 			
-			answers = dns.resolver.query(new_url2, 'CNAME')					
+			answers = dns.resolver.query(new_url, 'CNAME')					
 			print '\n[+]query qname:', answers.qname
 			for rdata in answers:
 				print ' cname target address:', rdata.target
 			
 		except dns.resolver.NXDOMAIN:
-			print "[-]"+ str(new_url2) + '-' + " Invalid domain"
+			print "[-]"+ str(new_url) + '-' + " Invalid domain"
 			 
 		except dns.resolver.Timeout:
-			print str(new_url2) + '-' + " Timed out while resolving"
+			print str(new_url) + '-' + " Timed out while resolving"
 		except dns.exception.DNSException:
-			print "[-]" + str(new_url2) + '-' + " Unhandled exception"
+			print "[-]" + str(new_url) + '-' + " Unhandled exception"
 	else:
-		print "\n[-]Can't find the CNAME of qname: " + new_url2
+		print "\n[-]Can't find the CNAME of qname: " + new_url
 
 def nmapscan():
-	new_url = x.strip("http://")
-	new_url2 = new_url.strip('/')	
-
-	nm.scan(new_url2, '20-25')
+	new_url = x.replace("http://", "")
 	try:
+		nm.scan(new_url, '20-25')
 		for host in nm.all_hosts():
 			print "\nHost: {0} ({1})"  .format(host, nm[host].hostname()) 
 			print "Host State:  %s" % nm[host].state()
@@ -150,9 +151,10 @@ def nmapscan():
 					
 					print "{0}     {1}    {2}" .format(ports, nm[host][proto][ports]['state'], nm[host][proto][ports]['name'])
 	except KeyError as e:
-		print"[!] Cannot scan host!: " + new_url2 + "\n"		
-print "\n                                                 [PHASE: 4]                                                 \n\n"		
-print "\n......................................................................................\n"
+		print "[!] Cannot scan host!: " + new_url + "\n"	
+print "\n...............................................................................................\n"		
+print "\n                                                 [PHRASE: 4]: Starts below                                                \n\n"		
+
 
 print "\n[!]Finding the Ports stats of 200's URL's \n"
 nm = nmap.PortScanner()
@@ -161,13 +163,13 @@ for x in urls_returning200:
 	nmapscan()
 	
 	
-print "\n......................................................................................\n"
+print "\n...............................................................................................\n"
 print "\n[!]Finding the Ports stats of 400's URL's \n"
 
 for x in urls_returning400:
 	nmapscan()
 	
-print "\n......................................................................................\n"
+print "\n...............................................................................................\n"
 print "\n[!]Finding the Ports stats of 401's URL's \n"	
 
 for x in urls_returning401:
