@@ -24,7 +24,7 @@ And it will show you how much time has taken by this script.
 2. There are lot of different modules are used, So be sure you have installed all the defined modules properly.
 
 
-# Ussage: 
+# Usage: 
 
 `C:\>autorecon.py -t domainname.com -f anyfilename.txt`
 
