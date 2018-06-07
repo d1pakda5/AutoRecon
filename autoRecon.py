@@ -54,7 +54,7 @@ urls_returning401 = []
 urls_returning403 = []
 urls_returning404 = []
 
-print "\n                                                 [PHRASE: 2]                                                 \n"			
+			
 for url in find_from_sublister(hostname):
     url = "http://" + url.strip()
     try:
@@ -73,7 +73,7 @@ for url in find_from_sublister(hostname):
 		
     except requests.exceptions.RequestException as e:
         print "Can't make the request to this Subdomain {}".format(url)
-
+print "\n                                                 [PHRASE: 2]                                                 \n"
 print "\n......................................................................................\n"	
 print "\n[!]Greping the url's whose status code are 200\n"
 	
