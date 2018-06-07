@@ -26,7 +26,7 @@ And it will show you how much time has taken by this script.
 
 # Usage: 
 
-`C:\>autorecon.py -t domainname.com -f anyfilename.txt`
+`C:\>autoRecon.py -t domainname.com -f anyfilename.txt`
 
 **Note:** 
 
