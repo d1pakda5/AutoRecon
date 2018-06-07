@@ -1,0 +1,7 @@
+os
+optparse
+re
+requests
+dnspython
+nmap
+time
