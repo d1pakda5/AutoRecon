@@ -1,14 +1,14 @@
 # AutoRecon
 
-AutoRecon is a tool which have 4 Phrases.
+AutoRecon is a tool which have 4 Phases.
 
-<b>Phrase no.1:</b> It will found the subdomains through the use of the sublister.
+Phase 1: It will find the subdomains through the use of the sublister.
 
-<b>Phrase no.2:</b> It will found the status code of each Subdomains which was found by the sublister and make seperate list of each subdomain with there own Status code. Like seperate list of 200's, 400's, 401's, 403's, 404's status code subdomains.
+Phase 2: It will find the status code of each Subdomain found by the sublister and make seperate list of each subdomain with their respective status code. 
 
-<b>Phrase no.3:</b> In this phrase the tool will try to find the CNAME's entries of 404's subdomains. NOTE: For this Phrase, the main aim is to  find the SUBDOMAIN TAKE-OVER Vuln.
+Phase 3: In this phase the tool will try to find the CNAME's entries of 404's subdomains. NOTE: For this Phase, the main objective is to check for the SUBDOMAIN TAKE-OVER Vuln.
 
-<b>Phrase no.4:</b> Now in the last phrase, the tool will find the Port status and Services running on each Subdomains port. Note: This tool will focus only on ports between "20-25" for future Upgradation. But you can change it, at line 138.
+Phase no.4: Now in the last phase, the tool will find the Port status and Services running on each Subdomains port. Note: This tool will focus only on ports between "20-25" for future Upgradation. But you can change it, at line 138.
 
 And it will show you how much time has taken by this script.
 
