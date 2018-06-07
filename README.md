@@ -33,6 +33,10 @@ And it will show you how much time has taken by this script.
 -t is for "Target" address and should be in this **domainname.com** format
 <br>-f is for "Filename", which is required by this tool. And should be in **.txt** extension.
 
+# Working Environment
+
+Perfectly tested in python 2.7 in Windows 10.
+
 # Questions I used to asked myself.
 
 <h2> Goal </h2>
