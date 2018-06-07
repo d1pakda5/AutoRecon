@@ -47,7 +47,7 @@ The main aim for this tool is to Automate things, So that you can focus on other
 
 I use it because It covers mostly all site which we use to reveal the subdomains. So, it gives a bunch of Subdomains.
 
-<h2> What is the use of Phrase-4 (nmap-scanning)</h2>
+<h2> What is the use of Phase-4 (nmap-scanning)</h2>
 
 Off-course it will find the nmap ports of each subdomains in between ports 20-25. So if someone finds that there is a port open named FTP, from the bunch of namy subdomains then it has the high probability that it allows anonymously login, and may be some weak passwords as company may not aware about it because of many subdomains. So it alerts you.
 
