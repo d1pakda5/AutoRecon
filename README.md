@@ -53,6 +53,6 @@ I am extreamly waiting for your feedback about this tool.
 
 # Contact
 
-[Utkarsh Agrawal](http://agrawalsmart7.com)
+
 [agrawalsmart7](http://twitter.com/agrawalsmart7)
 
