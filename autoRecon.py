@@ -26,7 +26,7 @@ def find_from_sublister(target):
 		print "\n\n                                                 [PHRASE: 1]: Starts below                                                 \n"
 		print "\n[!][!]Getting Subdomains from Sublister\n\n"
 		try:
-			os.chdir("/tools/Sublist3r-master/") #Note: Here you can change the Directory of Sublister tool
+			os.chdir("C:/tools/Sublist3r-master/") #Note: Here you can change the Directory of Sublister tool
 			files = os.getcwd()
 				
 			formate = "sublist3r.py -d " + str(target) + " -o " + str(filename)
