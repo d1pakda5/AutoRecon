@@ -109,10 +109,10 @@ print "\n\n                                                 [PHRASE: 3]: Starts 
 	
 print "\n[!]Finding the CNAME's of 404 URL's\n"
 
-for y in urls_returning400:
+for y in urls_returning404:
 	
 	req2 = requests.get(y)	
-	if req2.status_code == 400:
+	if req2.status_code == 404:
 		
 		new_url = y.replace("http://", "")
 		
