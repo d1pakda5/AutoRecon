@@ -129,8 +129,7 @@ print "\n[!]Finding the Urls's status Code is 404\n"
 
 for x in set(urls_returning404):
 	print x
-	
-print "\nThe Overall time taken by this script is : ", time.time()-start , 'seconds' 	
+	 	
 print "\n...............................................................................................\n"	
 print "\n\n                                                 [PHRASE: 3]: Starts below                                                \n"	
 	
