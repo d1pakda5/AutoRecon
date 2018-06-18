@@ -1,15 +1,12 @@
-import os
-import optparse
-import requests
-import re
-import dns.resolver
-from dns.resolver import NXDOMAIN
-import concurrent.futures
-from concurrent.futures import ThreadPoolExecutor
-import time
-import socket
-import threading
-import ftplib
-from ftplib import FTP
-import Queue
-import subprocess
+os
+optparse
+requests
+re
+dns.resolver
+concurrent.futures
+time
+socket
+threading
+ftplib
+Queue
+subprocess
