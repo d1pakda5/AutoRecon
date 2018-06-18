@@ -65,9 +65,9 @@ I use WAD because wappalyzer module don't give the version of CMS, servers, fram
 <h2>What type of username and password list using?</h2>
 Here is the simple usernames and as well as passwords.
 
-`'admin','anonymous', 'password','Password','root1','toor','ftp','abc123','test','test123','test1','webadmin','user','user123','system','admin123','Admin','admin1234','testing','qwerty','testuser','123456','root123','toor123','sysadm','nobody','test2','admin2','root2'`
+`'admin','anonymous', 'password','Password','root1','toor','ftp','abc123','test','test123','test1','webadmin','user','user123','system','admin123','Admin','admin1234','testing','qwerty','testuser','123456','root123','toor123','sysadm','nobody','test2','admin2','root2','FTP'`
 
-Note: This list make 900+ combinations of username and password.
+Note: This list make 850+ combinations of username and password.
 
 # Time per subdomain..
 
