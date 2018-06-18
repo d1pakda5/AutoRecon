@@ -107,25 +107,25 @@ for x in set(urls_returning200):
 	print x
 
 #print "\n..........................................................................\n"	
-print "\n[!]Finding the Urls's status Code is 400\n"
+print "\n\n[!]Finding the Urls's status Code is 400\n"
 
 for x in set(urls_returning400):
 	print x
 
 #print "\n..........................................................................\n"	
-print "\n[!]Finding the Urls's status Code is 401\n"
+print "\n\n[!]Finding the Urls's status Code is 401\n"
 
 for x in set(urls_returning401):
 	print x
 
 #print "\n..........................................................................\n"	
-print "\n[!]Finding the Urls's status Code is 403\n"
+print "\n\n[!]Finding the Urls's status Code is 403\n"
 
 for x in set(urls_returning403):
 	print x
 
 
-print "\n[!]Finding the Urls's status Code is 404\n"
+print "\n\n[!]Finding the Urls's status Code is 404\n"
 
 for x in set(urls_returning404):
 	print x
@@ -133,7 +133,7 @@ for x in set(urls_returning404):
 print "\n...............................................................................................\n"	
 print "\n\n                                                 [PHRASE: 3]: Starts below                                                \n"	
 	
-print "\n[!]Finding the CNAME's of 404 URL's\n"
+print "\n\n[!]Finding the CNAME's of 404 URL's\n"
 
 for y in urls_returning404:
 	
