@@ -33,7 +33,7 @@ def find_from_sublister(target):
 	
 	
 
-	print "\n\n                                                 [PHASE: 1]: Starts below                                                 \n"
+	print "\n\n                                                 [PHRASE: 1]: Starts below                                                 \n"
 	print "\n[!][!]Getting Subdomains from Sublister\n\n\n\n"
 	try:
 		os.chdir("C:/tools/Sublist3r-master/") #Note: Here you can change the Directory of Sublister tool
@@ -45,7 +45,7 @@ def find_from_sublister(target):
 		fopen = open(filename, 'r')
 		os.chdir("C:/")
 		print "\n......................................................................................" 
-		print "\n\n                                                 [PHASE: 2]: Starts below                                                 \n"
+		print "\n\n                                                 [PHRASE: 2]: Starts below                                                 \n"
 		print "[!!] Unavailable Subdomains\n"
 		return fopen.readlines()
 		
@@ -71,6 +71,7 @@ def urlrequests(ur):
 	try:
 
 		req = requests.get(ur)
+		
 		if req.status_code == responsecode[0]:
 			urls_returning200.append(ur)
 			
@@ -131,7 +132,7 @@ for x in set(urls_returning404):
 	print x
 	 	
 print "\n...............................................................................................\n"	
-print "\n\n                                                 [PHASE: 3]: Starts below                                                \n"	
+print "\n\n                                                 [PHRASE: 3]: Starts below                                                \n"	
 	
 print "\n\n[!]Finding the CNAME's of 404 URL's\n"
 
@@ -163,17 +164,31 @@ def connCheck(ip, port):
 	server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	server.settimeout(3)
 	try:
-		server.connect((ip, port))  # argument must be a tuple pair of ip address and port
+		if port == 21:
+			result = server.connect((ip, port))  # argument must be a tuple pair of ip address and port
+			ftpurls.append(ip)	
+			print "\t [+]" + str(port)
+					
+		elif port == 80:
+			result = server.connect((ip, port))  # argument must be a tuple pair of ip address and port
+			httpurls.append(ip)
+			print "\t [+]" + str(port)
+		else:
+			result = server.connect((ip, port)) 
+			print  "\t [+]" + str(port)
 		
-		ports.append(port)
-		print  "\t [+]" + str(port)
+			
+				
+			
+		
 		
 		server.close()
 	except Exception as e:
 		pass
+	
 	return	
 
-	
+
 def socketscan(y):
 	
 	mid = time.time()
@@ -208,20 +223,13 @@ def socketscan(y):
 	time.sleep(0.2)
 	thread7.start()
 	thread7.join()
-	if 21 in ports:
-			ftpurls.append(newurl)
-	else:
-		print "\n\t" +"[-]FTP port is Closed/Filter, So will not do bruteforce on it.\n" 
+	
 		
-	if 80 in ports:
-		httpurls.append(newurl)
-	else:
-		print "\n\t" +"[-]HTTP port is Closed/Filter, So will not find the CMS's etc.\n" 
 
 
 print  "\n...............................................................................................\n"	
 
-print "\n\n                                                 [PHASE: 4]: Starts below                                                \n"
+print "\n\n                                                 [PHRASE: 4]: Starts below                                                \n"
 print "[!]Finding the Port status of 200 status \n"
 
 for x in urls_returning200:	
@@ -251,7 +259,7 @@ print "\n[!]Finding the Port status of 404 status \n"
 for x in urls_returning404:
 	socketscan(x)
 print "\n.........................................................................."
-print "\n\n                                                 [PHASE: 5]: Starts below                                                \n"
+print "\n\n                                                 [PHRASE: 5]: Starts below                                                \n"
 print "Finding the CMS's, Frameworks, Server of subdomains which have HTTP port open\n"
 
 def httpurlstates(y):
@@ -270,7 +278,7 @@ for x in httpurls:
 	
 print "\n...............................................................................................\n"
 
-print "\n\n                                                 [PHASE: 6]: Starts below                                                \n"
+print "\n\n                                                 [PHRASE: 6]: Starts below                                                \n"
 print "[!]Executing anonymous login one by one on Subdomains which have FTP port open. If any.\n"
 
 
@@ -321,7 +329,7 @@ for x in ftpurls:
 
 print "\n...............................................................................................\n"
 
-print "\n\n                                                 [PHASE: 7]: Starts below                                                \n"
+print "\n\n                                                 [PHRASE: 7]: Starts below                                                \n"
 
 
 print "\n BruteForcing Usernames and password on only domains which are not allowing the anonymous logins\n "
@@ -344,5 +352,5 @@ for items in threads:
 	items.join()	
 	
 
-				
+		
 print "\nThe Overall time taken by this script is : ", time.time()-start , 'seconds'  
