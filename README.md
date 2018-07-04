@@ -1,6 +1,6 @@
 # AutoRecon
 
-AutoRecon is a tool which have 7 Phases.
+AutoRecon is a tool which have 6 Phases.
 
 **Phase 1**: It will find the subdomains through the use of the sublister.
 
@@ -14,9 +14,8 @@ AutoRecon is a tool which have 7 Phases.
 
 **Phase 6**: At the end, if there is any FTP open found in "Phase 4", then it will try to get the Anonymous login.
 
-**Phase 7**: If there is no anonymous login allowed then it will try to brute force the usernames and passwords. 
 
-For not to get DDOS, I have defined some 900 combinations of Usernames and Passwords but these are most common, I think :-) . But soon I will give the feature that you can defined your username and password list. ;)
+
 
 
 
@@ -66,12 +65,6 @@ Off-course it will find the nmap ports of each subdomains. So if someone finds t
 <h2>Why I use WAD tool? Why not Wappalyzer module in python?</h2>
 I use WAD because wappalyzer module don't give the version of CMS, servers, frameworks so that's useless for me. WAD do all these things.
 
-<h2>What type of username and password list using?</h2>
-Here is the simple usernames and as well as passwords.
-
-`'admin','anonymous', 'password','Password','root1','toor','ftp','abc123','test','test123','test1','webadmin','user','user123','system','admin123','Admin','admin1234','testing','qwerty','testuser','123456','root123','toor123','sysadm','nobody','test2','admin2','root2','FTP'`
-
-Note: This list make 850+ combinations of username and password.
 
 # Time per subdomain..
 
