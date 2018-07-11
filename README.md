@@ -1,6 +1,6 @@
 # AutoRecon
 
-AutoRecon is a tool which have 6 Phases.
+AutoRecon is a tool which have 7 Phases.
 
 **Phase 1**: It will find the subdomains through the use of the sublister.
 
