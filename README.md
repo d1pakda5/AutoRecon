@@ -12,9 +12,9 @@ AutoRecon is a tool which have 6 Phases.
 
 **Phase 5**: In this phase the tool will find the *What CMS, Server, Framworks are using in the Subdomains with the help of 'WAD' tool.* https://pypi.org/project/wad/
 
-**Phase 6**: At the end, if there is any FTP open found in "Phase 4", then it will try to get the Anonymous login.
+**Phase 6**: In this Phase, if there is any FTP open found in "Phase 4", then it will try to get the Anonymous login.
 
-
+**Phase 7**: Now in the last phase it will find the URLs in the WayBack machine but whose domain status code is 401, 403 ONLY.
 
 
 
@@ -45,6 +45,7 @@ AutoRecon is a tool which have 6 Phases.
 Perfectly tested in python 2.7 in Windows 10.
 
 # Demo Video
+Since phase 7 is new, You can't see this in Demo video.
 
 [Demovideo](http://agrawalsmart7.com/demo.mp4)
 
