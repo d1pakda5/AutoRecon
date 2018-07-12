@@ -14,7 +14,7 @@ AutoRecon is a tool which have 7 Phases.
 
 **Phase 6**: In this Phase, if there is any FTP open found in "Phase 4", then it will try to get the Anonymous login.
 
-**Phase 7**: Now in the last phase it will find the URLs in the WayBack machine but whose domain status code is 401, 403 ONLY (Will add it very-2 Soon)
+**Phase 7**: Now in the last phase it will find the URLs in the WayBack machine but whose domain status code is 401, 403.
 
 
 
